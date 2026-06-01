@@ -361,6 +361,11 @@ section { padding: 100px 0; }
   transform: translateY(-3px);
   box-shadow: 0 24px 42px rgba(44, 24, 16, 0.12);
 }
+.product-tag.active,
+.product-card.active {
+  border: 1px solid rgba(180, 58, 94, 0.18);
+  background: rgba(242, 213, 222, 0.55);
+}
 .product-tag .icon,
 .product-card .icon {
   display: inline-flex;
