@@ -31,6 +31,17 @@ navLinks.querySelectorAll('a').forEach(link => {
 document.addEventListener('click', (e) => {
   if (!e.target.closest('nav') && navLinks.classList.contains('open')) {
     navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+    closeAllDetails();
   }
 });
 
