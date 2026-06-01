@@ -458,6 +458,12 @@ section { padding: 100px 0; }
   font-weight: 700;
   margin-bottom: 4px;
 }
+.contact-info a:hover {
+  color: var(--rose);
+}
+.contact-map {
+  min-height: 360px;
+}
 .contact-map iframe {
   width: 100%;
   min-height: 360px;
@@ -474,6 +480,8 @@ footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 footer .logo {
   color: #fff;
