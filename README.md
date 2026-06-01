@@ -198,6 +198,46 @@ Proje geliştirilirken Claude Code / opencode AI asistanı kullanılmıştır.
 cd C:\Users\troll\NaturalRoseShop
 npx serve .
 # Chrome DevTools > Lighthouse > "Generate report"
+
+## Kurulum ve Yayınlama
+
+Projeyi yerel olarak çalıştırmak için basit bir HTTP sunucusu yeterlidir. Node.js yüklüyse şu adımları kullanabilirsiniz:
+
+```powershell
+cd C:\Users\troll\NaturalRoseShop
+npx serve .
+```
+
+Alternatif olarak Python yüklüyse:
+
+```powershell
+cd C:\Users\troll\NaturalRoseShop
+python -m http.server 8000
+# tarayıcıda http://localhost:8000 adresini açın
+```
+
+Dosya yapısı:
+- `index.html` — Ana sayfa (HTML)
+- `styles.css` — Ayrılmış stil dosyası
+- `script.js` — Ayrılmış JavaScript
+- `README.md` — Proje bilgileri ve talimatlar
+- `.gitignore` — Git ignore kuralları
+
+GitHub üzerinde yayımlamak için:
+
+1. Yeni bir repo oluşturun (ör. `NaturalRoseShop`).
+2. Yerel depoya remote ekleyin ve push edin:
+
+```powershell
+git remote add origin https://github.com/<kullanici-adiniz>/NaturalRoseShop.git
+git branch -M main
+git push -u origin main
+```
+
+Not: GitHub'a doğrudan push yapmak için yetkilendirme (PAT veya gh CLI) gereklidir.
+
+İsterseniz ben 10 commit içeren yerel geçmişi oluşturup, sizin adına GitHub'da repo açma adımına yardımcı olabilirim — fakat push için sizin GitHub kimlik bilgilerinize veya bir uzak URL ile erişime ihtiyacım olacak.
+
 ```
 
 **Tahmini Lighthouse Skoru (kod analizine göre):**
