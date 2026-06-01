@@ -22,7 +22,10 @@
   --nav-h: 72px;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
 body {
   font-family: 'Cormorant Garamond', serif;
   background: var(--bg);
@@ -200,6 +203,12 @@ nav.scrolled {
   background: var(--rose-dark);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(180,58,94,0.3);
+}
+.btn:focus-visible,
+.hamburger:focus-visible,
+.nav-links a:focus-visible {
+  outline: 3px solid rgba(180,58,94,0.5);
+  outline-offset: 4px;
 }
 .btn-outline {
   background: transparent;
