@@ -33,6 +33,9 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
+body.no-scroll {
+  overflow: hidden;
+}
 
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }

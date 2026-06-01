@@ -53,6 +53,7 @@ function closeAllDetails() {
     el.classList.remove('active');
   });
   if (overlay) { overlay.remove(); overlay = null; }
+  document.body.classList.remove('no-scroll');
 }
 
 function isMobile() { return window.innerWidth <= 768; }
@@ -72,6 +73,7 @@ document.querySelectorAll('.product-tag, .product-card').forEach(el => {
           overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:999;';
           overlay.addEventListener('click', closeAllDetails);
           document.body.appendChild(overlay);
+          document.body.classList.add('no-scroll');
         }
       }
     }
