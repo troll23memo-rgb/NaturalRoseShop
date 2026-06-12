@@ -3,74 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Natural Rose Shop, doğal sabunlar, gül yağları, kolonyalar ve aromaterapi ürünleriyle sağlıklı ve organik bir bakım deneyimi sunar.">
+  <meta name="description" content="Natural Rose Shop — Doğanın en saf halleri, gelenekten geleceğe. El yapımı doğal sabunlar, gül yağları, kolonyalar ve aromaterapi ürünleri.">
+  <meta name="keywords" content="doğal sabun, gül yağı, lavanta yağı, kolonya, doğal ürünler, Isparta gülü, el yapımı sabun">
+  <meta name="author" content="Natural Rose Shop">
+  <meta property="og:title" content="Natural Rose Shop — Doğal Ürünler">
+  <meta property="og:description" content="Doğanın en saf halleri, gelenekten geleceğe…">
+  <meta property="og:type" content="website">
   <title>Natural Rose Shop — Doğal Ürünler</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
-  <link rel="stylesheet" href="styles.css?v=2">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Commissioner:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="logo">Natural <span>Rose</span> Shop</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about" data-i18n="navAbout">Hakkımızda</a></li>
-        <li><a href="#products" data-i18n="navProducts">Ürünler</a></li>
-        <li><a href="#contact" data-i18n="navContact">İletişim</a></li>
-      </ul>
-      <div class="nav-actions">
-        <button class="nav-btn" id="langToggle" aria-label="Dil / Language">🇬🇧 EN</button>
-        <button class="nav-btn" id="themeToggle" aria-label="Tema / Theme">🌙</button>
-        <button class="hamburger" id="hamburger" aria-label="Menü" aria-controls="navLinks" aria-expanded="false">☰</button>
+  <!-- ===== NAVIGATION ===== -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Natural Rose Shop">
+        <svg class="logo-icon" viewBox="0 0 32 32" width="32" height="32" fill="none">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M16 8c-2.5 0-5 2-5 5 0 3 2.5 5 5 5s5-2 5-5c0-3-2.5-5-5-5z" fill="currentColor" opacity="0.3"/>
+          <path d="M16 12c-1 0-2 .8-2 2s1 2 2 2 2-.8 2-2-1-2-2-2z" fill="currentColor" opacity="0.5"/>
+          <path d="M10 22c2-2 4-3 6-3s4 1 6 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+        </svg>
+        <span class="logo-text">Natural <em>Rose</em></span>
+      </a>
+
+      <nav class="nav-primary" id="navPrimary" aria-label="Ana menü">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active" data-i18n="navHome">Ana Sayfa</a></li>
+          <li><a href="#products" class="nav-link" data-i18n="navProducts">Ürünler</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">Hakkımızda</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="navContact">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="currencyToggle" aria-label="Para birimi değiştir">
+          <span class="currency-label">₺</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </button>
+        <button class="icon-btn" id="langToggle" aria-label="Dil değiştir">
+          <span class="lang-label">EN</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </button>
+        <button class="icon-btn" id="themeToggle" aria-label="Tema değiştir">
+          <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" id="cartToggle" aria-label="Sepet">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menü" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-  </nav>
+  </header>
 
   <!-- ===== HERO ===== -->
   <section id="hero">
-    <div class="hero-deco hero-deco-1"></div>
-    <div class="hero-deco hero-deco-2"></div>
+    <div class="hero-bg">
+      <div class="hero-blob blob-1"></div>
+      <div class="hero-blob blob-2"></div>
+      <div class="hero-blob blob-3"></div>
+    </div>
 
     <div class="hero-content">
-      <div class="hero-badge" data-i18n="heroBadge">Doğal & Organik</div>
+      <div class="hero-badge" data-i18n="heroBadge">✦ Doğal & Organik</div>
       <h1>
-        Natural <span class="rose">Rose</span><br>
-        <span class="gold">Shop</span>
+        <span class="hero-line-1" data-i18n="heroLine1">Doğanın En Saf</span>
+        <span class="hero-line-2"><span data-i18n="heroLine2pre">Hali</span> <em data-i18n="heroLine2em">Rose</em></span>
       </h1>
-      <p class="hero-sub" data-i18n="heroSub">
-        Doğanın en saf halleri, gelenekten geleceğe…
-      </p>
-      <a href="#products" class="btn" data-i18n="heroBtn">Ürünleri Keşfet</a>
+      <p class="hero-sub" data-i18n="heroSub">Gelenekten geleceğe, en özel bakım ürünleriyle tanışın.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary" data-i18n="heroBtn">Ürünleri Keşfet</a>
+        <a href="#about" class="btn btn-outline" data-i18n="heroBtnAbout">Hikayemiz</a>
+      </div>
     </div>
 
     <div class="hero-scroll">
       <span data-i18n="heroScroll">Kaydır</span>
-      <div class="line"></div>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about">
+  <!-- ===== FEATURES BAR ===== -->
+  <section class="features-bar">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image reveal"><span>🌹</span></div>
-        <div class="about-text reveal">
-          <div class="section-label" data-i18n="aboutLabel">Hakkımızda</div>
-          <h2 class="section-title" data-i18n="aboutTitle">Doğal Güzelliğin Adresi</h2>
-          <p data-i18n="aboutP1" data-i18n-html="true">
-            <strong>Natural Rose Shop</strong> olarak, en saf ve doğal ürünleri sizlerle buluşturuyoruz.
-            Isparta'nın eşsiz gül ve lavanta yağlarından, el yapımı doğal sabunlarımıza kadar
-            her ürünümüz özenle seçilir ve titizlikle hazırlanır.
-          </p>
-          <p data-i18n="aboutP2" data-i18n-html="true">
-            Yılların birikimiyle oluşturduğumuz güven dolu alışveriş deneyimimizle,
-            sağlığınıza ve doğaya saygılı ürünler sunuyoruz. Her bir ürünümüz,
-            doğanın bize sunduğu en değerli hediyelerden ilham alır.
-          </p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <div>
+            <strong data-i18n="feat1Title">Ücretsiz Kargo</strong>
+            <span data-i18n="feat1Desc">1000₺ üzeri siparişlerde</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div>
+            <strong data-i18n="feat2Title">%100 Doğal</strong>
+            <span data-i18n="feat2Desc">Kimyasal katkı içermez</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><circle cx="12" cy="12" r="3"/></svg>
+          <div>
+            <strong data-i18n="feat3Title">Güvenli Ödeme</strong>
+            <span data-i18n="feat3Desc">%100 güvenli alışveriş</span>
+          </div>
+        </div>
+        <div class="feature-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>
+            <strong data-i18n="feat4Title">30 Gün İade</strong>
+            <span data-i18n="feat4Desc">Koşulsuz iade garantisi</span>
+          </div>
         </div>
       </div>
     </div>
@@ -79,294 +130,258 @@
   <!-- ===== PRODUCTS ===== -->
   <section id="products">
     <div class="container">
-      <div class="products-header reveal">
-        <div class="section-label" data-i18n="productsLabel">Ürünlerimiz</div>
-        <h2 class="section-title" data-i18n="productsTitle">Doğadan Sofranıza, Gelenekten Cildinize</h2>
-        <p class="section-desc" style="margin:0 auto;" data-i18n="productsDesc">
-          Her bir ürünümüz, doğanın bize sunduğu en saf halleriyle hazırlanmıştır.
-        </p>
+      <div class="section-head">
+        <span class="section-label" data-i18n="productsLabel">Ürünlerimiz</span>
+        <h2 class="section-title" data-i18n="productsTitle">Doğadan Gelen Şifa</h2>
+        <p class="section-desc" data-i18n="productsDesc">Her bir ürünümüz, doğanın bize sunduğu en saf halleriyle hazırlanmıştır.</p>
       </div>
 
-      <!-- === SOAPS === -->
-      <div class="category reveal">
-        <div class="category-header">
-          <h3 data-i18n="catSoaps">🌿 Doğal Sabunlar</h3>
-          <span class="cat-badge" data-i18n="catSoapsPrice">50 ₺</span>
-          <span class="cat-note" data-i18n="catSoapsNote">18 çeşit • el yapımı • doğal</span>
-        </div>
-        <div class="product-grid tags">
-          <div class="product-tag"><span class="icon">🧴</span><span class="product-name" data-tr="Eşşek Sütlü Sabun" data-en="Donkey Milk Soap">Eşşek Sütlü Sabun</span><div class="tag-detail" data-tr="Cildi besler, nemlendirir ve gençleştirir. İçerdiği vitaminler (A, C, E, B12) ve amino asitler sayesinde kırışıklık karşıtı etki sunar. Egzama, sedef ve akne gibi cilt sorunlarını yatıştırır." data-en="Nourishes the skin, moisturizes, and rejuvenates. Rich in vitamins (A, C, E, B12) and amino acids, it offers anti-aging effects. Soothes skin problems such as eczema, psoriasis, and acne.">Cildi besler, nemlendirir ve gençleştirir. İçerdiği vitaminler (A, C, E, B12) ve amino asitler sayesinde kırışıklık karşıtı etki sunar. Egzama, sedef ve akne gibi cilt sorunlarını yatıştırır.</div></div>
-          <div class="product-tag"><span class="icon">🌹</span><span class="product-name" data-tr="Gül Sabunu" data-en="Rose Soap">Gül Sabunu</span><div class="tag-detail" data-tr="Cildi nazikçe temizler, nemlendirir ve canlandırır. Antibakteriyel özelliğiyle sivilce oluşumunu engeller. Antioksidan yapısıyla cildi serbest radikallere karşı korur, rahatlatıcı aromaterapi etkisi sunar." data-en="Gently cleanses, moisturizes, and revitalizes the skin. Its antibacterial properties prevent acne formation. Its antioxidant structure protects the skin against free radicals and offers a relaxing aromatherapy effect.">Cildi nazikçe temizler, nemlendirir ve canlandırır. Antibakteriyel özelliğiyle sivilce oluşumunu engeller. Antioksidan yapısıyla cildi serbest radikallere karşı korur, rahatlatıcı aromaterapi etkisi sunar.</div></div>
-          <div class="product-tag"><span class="icon">🐐</span><span class="product-name" data-tr="Keçi Sütlü Sabun" data-en="Goat Milk Soap">Keçi Sütlü Sabun</span><div class="tag-detail" data-tr="Derinlemesine temizler, gözenekleri açar. Laktik asit sayesinde ölü hücreleri nazikçe arındırır, cildi nemlendirir ve onarır. Akne, egzama ve cilt tahrişlerine karşı etkilidir." data-en="Deeply cleanses and opens pores. Thanks to lactic acid, it gently removes dead cells, moisturizes and repairs the skin. Effective against acne, eczema, and skin irritations.">Derinlemesine temizler, gözenekleri açar. Laktik asit sayesinde ölü hücreleri nazikçe arındırır, cildi nemlendirir ve onarır. Akne, egzama ve cilt tahrişlerine karşı etkilidir.</div></div>
-          <div class="product-tag"><span class="icon">🛁</span><span class="product-name" data-tr="Türk Hamam Sabunu" data-en="Turkish Hammam Soap">Türk Hamam Sabunu</span><div class="tag-detail" data-tr="Geleneksel Türk hamam kültürünün vazgeçilmezi. Zeytinyağı ile zenginleştirilmiş formülü cildi derinlemesine temizler, ferahlatır ve canlandırır. Bol köpüklü yapısıyla peeling etkisi sağlar." data-en="An indispensable part of traditional Turkish bath culture. Its formula enriched with olive oil deeply cleanses, refreshes, and revitalizes the skin. Provides a peeling effect with its rich lather.">Geleneksel Türk hamam kültürünün vazgeçilmezi. Zeytinyağı ile zenginleştirilmiş formülü cildi derinlemesine temizler, ferahlatır ve canlandırır. Bol köpüklü yapısıyla peeling etkisi sağlar.</div></div>
-          <div class="product-tag"><span class="icon">🌱</span><span class="product-name" data-tr="Aloe Vera Sabunu" data-en="Aloe Vera Soap">Aloe Vera Sabunu</span><div class="tag-detail" data-tr="Yatıştırıcı ve yoğun nemlendirici etkisiyle hassas ciltler için idealdir. Güneş sonrası bakımda etkilidir. Cilt tahrişlerini azaltır, cildi sakinleştirir ve yeniler." data-en="Ideal for sensitive skin with its soothing and intense moisturizing effect. Effective in post-sun care. Reduces skin irritations, calms, and renews the skin.">Yatıştırıcı ve yoğun nemlendirici etkisiyle hassas ciltler için idealdir. Güneş sonrası bakımda etkilidir. Cilt tahrişlerini azaltır, cildi sakinleştirir ve yeniler.</div></div>
-          <div class="product-tag"><span class="icon">🍎</span><span class="product-name" data-tr="Nar Sabunu" data-en="Pomegranate Soap">Nar Sabunu</span><div class="tag-detail" data-tr="Antioksidan deposu nar özüyle cildi sıkılaştırır ve gençleştirir. Cilt hücrelerini yeniler, canlandırır ve elastikiyet kazandırır. Düzenli kullanımda cilde sağlıklı bir ışıltı verir." data-en="Tightens and rejuvenates the skin with pomegranate extract rich in antioxidants. Renews skin cells, revitalizes, and provides elasticity. Gives the skin a healthy glow with regular use.">Antioksidan deposu nar özüyle cildi sıkılaştırır ve gençleştirir. Cilt hücrelerini yeniler, canlandırır ve elastikiyet kazandırır. Düzenli kullanımda cilde sağlıklı bir ışıltı verir.</div></div>
-          <div class="product-tag"><span class="icon">🧄</span><span class="product-name" data-tr="Sarımsak Sabunu" data-en="Garlic Soap">Sarımsak Sabunu</span><div class="tag-detail" data-tr="Güçlü antibakteriyel ve antifungal özellikleriyle sivilce ve akneye karşı etkilidir. Cildi derinlemesine arındırır, mantar oluşumunu engeller ve cilt sağlığını destekler." data-en="Effective against acne and pimples with its strong antibacterial and antifungal properties. Deeply cleanses the skin, prevents fungal formation, and supports skin health.">Güçlü antibakteriyel ve antifungal özellikleriyle sivilce ve akneye karşı etkilidir. Cildi derinlemesine arındırır, mantar oluşumunu engeller ve cilt sağlığını destekler.</div></div>
-          <div class="product-tag"><span class="icon">🌸</span><span class="product-name" data-tr="Lavanta Sabunu" data-en="Lavender Soap">Lavanta Sabunu</span><div class="tag-detail" data-tr="Sakinleştirici ve rahatlatıcı lavanta aromasıyla stresi azaltır. Cilt tahrişlerini yatıştırır, antiseptik özelliğiyle hijyen sağlar. Sivilce ve egzamaya karşı destekleyicidir." data-en="Reduces stress with its calming and relaxing lavender aroma. Soothes skin irritations, provides hygiene with its antiseptic property. Supportive against acne and eczema.">Sakinleştirici ve rahatlatıcı lavanta aromasıyla stresi azaltır. Cilt tahrişlerini yatıştırır, antiseptik özelliğiyle hijyen sağlar. Sivilce ve egzamaya karşı destekleyicidir.</div></div>
-          <div class="product-tag"><span class="icon">✨</span><span class="product-name" data-tr="Kolojen Sabunu" data-en="Collagen Soap">Kolojen Sabunu</span><div class="tag-detail" data-tr="Cilt elastikiyetini artırır, kırışıklık karşıtı etki sunar. Kolajen desteğiyle cildi sıkılaştırır, gençleştirir ve daha dolgun bir görünüm kazandırır." data-en="Increases skin elasticity, offers anti-aging effects. Tightens the skin with collagen support, rejuvenates, and gives a fuller appearance.">Cilt elastikiyetini artırır, kırışıklık karşıtı etki sunar. Kolajen desteğiyle cildi sıkılaştırır, gençleştirir ve daha dolgun bir görünüm kazandırır.</div></div>
-          <div class="product-tag"><span class="icon">🫒</span><span class="product-name" data-tr="Zeytinyağlı Sabun" data-en="Olive Oil Soap">Zeytinyağlı Sabun</span><div class="tag-detail" data-tr="Yoğun nemlendirici etkisiyle kuru ciltler için birebirdir. Antioksidan bakımından zengin olan zeytinyağı, cildi besler, yumuşatır ve doğal bariyerini güçlendirir." data-en="Perfect for dry skin with its intense moisturizing effect. Rich in antioxidants, olive oil nourishes, softens, and strengthens the skin's natural barrier.">Yoğun nemlendirici etkisiyle kuru ciltler için birebirdir. Antioksidan bakımından zengin olan zeytinyağı, cildi besler, yumuşatır ve doğal bariyerini güçlendirir.</div></div>
-          <div class="product-tag"><span class="icon">🍋</span><span class="product-name" data-tr="Limon Sabunu" data-en="Lemon Soap">Limon Sabunu</span><div class="tag-detail" data-tr="Cilt lekelerini hafifletir ve canlandırır. Yağlı ciltleri dengeleyerek ferahlık verir. Antibakteriyel özelliğiyle cildi arındırır ve taze bir görünüm kazandırır." data-en="Lightens skin blemishes and revitalizes. Balances oily skin and provides freshness. Cleanses the skin with its antibacterial properties and gives a fresh appearance.">Cilt lekelerini hafifletir ve canlandırır. Yağlı ciltleri dengeleyerek ferahlık verir. Antibakteriyel özelliğiyle cildi arındırır ve taze bir görünüm kazandırır.</div></div>
-          <div class="product-tag"><span class="icon">🧴</span><span class="product-name" data-tr="Deve Sütlü Sabun" data-en="Camel Milk Soap">Deve Sütlü Sabun</span><div class="tag-detail" data-tr="Cildi derinlemesine besler, yoğun nemlendirir ve yumuşatır. Hassas ciltler için uygundur. Antioksidan yapısıyla cilt hücrelerini yeniler ve canlandırır." data-en="Deeply nourishes, intensely moisturizes, and softens the skin. Suitable for sensitive skin. Renews and revitalizes skin cells with its antioxidant structure.">Cildi derinlemesine besler, yoğun nemlendirir ve yumuşatır. Hassas ciltler için uygundur. Antioksidan yapısıyla cilt hücrelerini yeniler ve canlandırır.</div></div>
-          <div class="product-tag"><span class="icon">💛</span><span class="product-name" data-tr="Kükürt Sabunu" data-en="Sulfur Soap">Kükürt Sabunu</span><div class="tag-detail" data-tr="Akne ve sivilce tedavisinde oldukça etkilidir. Cildin yağ dengesini düzenler, mantar önleyici özelliğiyle cilt enfeksiyonlarına karşı korur. Gözenekleri derinlemesine temizler." data-en="Highly effective in acne and pimple treatment. Regulates the skin's oil balance, protects against skin infections with its antifungal properties. Deeply cleanses pores.">Akne ve sivilce tedavisinde oldukça etkilidir. Cildin yağ dengesini düzenler, mantar önleyici özelliğiyle cilt enfeksiyonlarına karşı korur. Gözenekleri derinlemesine temizler.</div></div>
-          <div class="product-tag"><span class="icon">🌰</span><span class="product-name" data-tr="Bıttım Sabunu" data-en="Bıttım Soap">Bıttım Sabunu</span><div class="tag-detail" data-tr="Saç dökülmesini azaltır, kepeği giderir ve saça doğal parlaklık verir. Cilt lekelerine ve egzamaya iyi gelir. Güneydoğu Anadolu'ya özgü menengiç yağından üretilir." data-en="Reduces hair loss, eliminates dandruff, and gives natural shine to hair. Good for skin blemishes and eczema. Produced from menengiç oil unique to Southeastern Anatolia.">Saç dökülmesini azaltır, kepeği giderir ve saça doğal parlaklık verir. Cilt lekelerine ve egzamaya iyi gelir. Güneydoğu Anadolu'ya özgü menengiç yağından üretilir.</div></div>
-          <div class="product-tag"><span class="icon">🌲</span><span class="product-name" data-tr="Ardıç Sabunu" data-en="Juniper Soap">Ardıç Sabunu</span><div class="tag-detail" data-tr="Antiseptik ve antifungal özellikleriyle cilt sorunlarına karşı etkilidir. Gözenekleri derinlemesine temizler, ciltteki fazla yağı dengeler ve canlandırır." data-en="Effective against skin problems with its antiseptic and antifungal properties. Deeply cleanses pores, balances excess oil on the skin, and revitalizes.">Antiseptik ve antifungal özellikleriyle cilt sorunlarına karşı etkilidir. Gözenekleri derinlemesine temizler, ciltteki fazla yağı dengeler ve canlandırır.</div></div>
-          <div class="product-tag"><span class="icon">🪵</span><span class="product-name" data-tr="Katran Sabunu" data-en="Tar Soap">Katran Sabunu</span><div class="tag-detail" data-tr="Sedef ve egzama gibi kronik cilt hastalıklarında yatıştırıcı etki gösterir. Kaşıntıyı azaltır, cildi arındırır ve pullanmayı önler. Güçlü antiseptik özelliğe sahiptir." data-en="Shows soothing effects in chronic skin diseases such as psoriasis and eczema. Reduces itching, cleanses the skin, and prevents flaking. Has strong antiseptic properties.">Sedef ve egzama gibi kronik cilt hastalıklarında yatıştırıcı etki gösterir. Kaşıntıyı azaltır, cildi arındırır ve pullanmayı önler. Güçlü antiseptik özelliğe sahiptir.</div></div>
-          <div class="product-tag"><span class="icon">🌾</span><span class="product-name" data-tr="Pirinç Sabunu" data-en="Rice Soap">Pirinç Sabunu</span><div class="tag-detail" data-tr="Cildi aydınlatır ve canlandırır. Leke görünümünü azaltır, cilt tonunu eşitler. İçerdiği vitaminlerle cildi besler ve pürüzsüz bir görünüm sağlar." data-en="Brightens and revitalizes the skin. Reduces the appearance of blemishes, evens skin tone. Nourishes the skin with its vitamins and provides a smooth appearance.">Cildi aydınlatır ve canlandırır. Leke görünümünü azaltır, cilt tonunu eşitler. İçerdiği vitaminlerle cildi besler ve pürüzsüz bir görünüm sağlar.</div></div>
-          <div class="product-tag"><span class="icon">🌿</span><span class="product-name" data-tr="Defne Sabunu" data-en="Laurel Soap">Defne Sabunu</span><div class="tag-detail" data-tr="Antibakteriyel ve antiseptik özellikleriyle cildi derinlemesine temizler. Saç köklerini güçlendirir, kepeği azaltır. Akne, egzama ve sedef hastalığına karşı etkilidir." data-en="Deeply cleanses the skin with its antibacterial and antiseptic properties. Strengthens hair roots, reduces dandruff. Effective against acne, eczema, and psoriasis.">Antibakteriyel ve antiseptik özellikleriyle cildi derinlemesine temizler. Saç köklerini güçlendirir, kepeği azaltır. Akne, egzama ve sedef hastalığına karşı etkilidir.</div></div>
-        </div>
-        <div class="product-info" style="margin-top:8px;" data-i18n="soapInfoHtml" data-i18n-html="true">
-          <strong>Doğal Sabunlarımız</strong> — Tüm sabunlarımız geleneksel yöntemlerle, doğal bitkisel yağlar kullanılarak el yapımı üretilir. Kimyasal katkı, paraben ve SLS içermez. <span class="card-detail-hint" data-i18n="detailHint">(Üzerine tıklayın)</span>
-        </div>
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="productSearch" class="search-input" data-i18n-placeholder="searchPlaceholder" placeholder="Ürün ara...">
       </div>
 
-      <!-- === SPECIAL PRODUCTS === -->
-      <div class="category reveal">
-        <div class="category-header">
-          <h3 data-i18n="catSpecial">⭐ Özel Ürünler</h3>
-          <span class="cat-note">öznel bakım & sağlık</span>
-        </div>
-        <div class="product-grid cards">
-          <div class="product-card">
-            <span class="icon">🧪</span>
-            <h4 class="product-name" data-tr="Kojik Asit Sabunu" data-en="Kojic Acid Soap">Kojik Asit Sabunu</h4>
-            <p class="desc" data-tr="Leke giderici • Cilt aydınlatıcı" data-en="Spot remover • Skin brightener">Leke giderici • Cilt aydınlatıcı</p>
-            <span class="price" data-tr="200 ₺" data-en="200 ₺">200 ₺</span>
-            <div class="card-detail" data-tr="Pirinç fermantasyonundan elde edilen doğal bileşen sayesinde cilt lekelerini azaltır, cilt tonunu eşitler ve aydınlatır. Antibakteriyel ve antifungal özellikleriyle sivilce izlerini hafifletir. Düzenli kullanımda daha berrak ve ışıltılı bir cilt sağlar." data-en="Reduces skin blemishes, evens and brightens skin tone thanks to its natural ingredient obtained from rice fermentation. Lightens acne scars with its antibacterial and antifungal properties. Provides a clearer and more radiant complexion with regular use.">Pirinç fermantasyonundan elde edilen doğal bileşen sayesinde cilt lekelerini azaltır, cilt tonunu eşitler ve aydınlatır. Antibakteriyel ve antifungal özellikleriyle sivilce izlerini hafifletir. Düzenli kullanımda daha berrak ve ışıltılı bir cilt sağlar.</div>
-          </div>
-          <div class="product-card">
-            <span class="icon">💎</span>
-            <h4 class="product-name" data-tr="Doğal Mentol Taşı" data-en="Natural Menthol Stone">Doğal Mentol Taşı</h4>
-            <p class="desc" data-tr="Ferahlatıcı • Aromaterapi" data-en="Refreshing • Aromatherapy">Ferahlatıcı • Aromaterapi</p>
-            <span class="price" data-tr="150 ₺" data-en="150 ₺">150 ₺</span>
-            <div class="card-detail" data-tr="Doğal mentolden elde edilen bu taş, ferahlatıcı ve canlandırıcı etkisiyle bilinir. Aromaterapide kullanılır, baş ağrısını hafifletir, solunumu açar. Masajla uygulandığında kas ağrılarını yatıştırır." data-en="Known for its refreshing and invigorating effect, this stone derived from natural menthol is used in aromatherapy, relieves headaches, opens the respiratory tract. When applied with massage, it soothes muscle aches.">Doğal mentolden elde edilen bu taş, ferahlatıcı ve canlandırıcı etkisiyle bilinir. Aromaterapide kullanılır, baş ağrısını hafifletir, solunumu açar. Masajla uygulandığında kas ağrılarını yatıştırır.</div>
-          </div>
-          <div class="product-card">
-            <span class="icon">🧴</span>
-            <h4 class="product-name" data-tr="Naturel Peeling" data-en="Natural Peeling">Naturel Peeling</h4>
-            <p class="desc" data-tr="Doğal peeling • Cilt yenileyici" data-en="Natural peeling • Skin renewing">Doğal peeling • Cilt yenileyici</p>
-            <span class="price" data-tr="300 ₺" data-en="300 ₺">300 ₺</span>
-            <div class="card-detail" data-tr="Tamamen doğal içeriklerle hazırlanmış peeling, ciltteki ölü hücreleri nazikçe arındırır, gözenekleri temizler ve cildi yeniler. Düzenli kullanımda cilt daha pürüzsüz, canlı ve genç bir görünüme kavuşur." data-en="Prepared with completely natural ingredients, this peeling gently removes dead cells, cleanses pores, and renews the skin. With regular use, the skin achieves a smoother, livelier, and younger appearance.">Tamamen doğal içeriklerle hazırlanmış peeling, ciltteki ölü hücreleri nazikçe arındırır, gözenekleri temizler ve cildi yeniler. Düzenli kullanımda cilt daha pürüzsüz, canlı ve genç bir görünüme kavuşur.</div>
-          </div>
-        </div>
+      <!-- Category Tabs -->
+      <div class="category-tabs" id="categoryTabs">
+        <button class="cat-tab active" data-cat="all" data-i18n="catAll">Tümü</button>
+        <button class="cat-tab" data-cat="soaps" data-i18n="catSoaps">Doğal Sabunlar</button>
+        <button class="cat-tab" data-cat="special" data-i18n="catSpecial">Özel Ürünler</button>
+        <button class="cat-tab" data-cat="sprays" data-i18n="catSprays">Oda Kokuları</button>
+        <button class="cat-tab" data-cat="perfume" data-i18n="catPerfume">Parfüm</button>
+        <button class="cat-tab" data-cat="oils" data-i18n="catOils">Doğal Yağlar</button>
+        <button class="cat-tab" data-cat="kolonya" data-i18n="catKolonya">Kolonya</button>
+        <button class="cat-tab" data-cat="creams" data-i18n="catCreams">Kremler</button>
       </div>
 
-      <!-- === ROOM SPRAYS === -->
-      <div class="category reveal">
-        <div class="category-header">
-          <h3 data-i18n="catSprays">🏠 Oda Kokuları</h3>
-          <span class="cat-badge" data-i18n="catSpraysPrice">250 ₺</span>
-          <span class="cat-note" data-i18n="catSpraysNote">4 ay kalıcılık • 7 çeşit</span>
+      <div class="product-grid" id="productGrid">
+        <!-- Products will be populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-deco-circle"></div>
+          <div class="about-image-frame">
+            <div class="about-image-placeholder">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF600lgVXWOD8oGk_Iy2pDx60YmUJ4yHYBdg&s" alt="Natural Rose Shop" class="about-img">
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num" data-count="34">0</span>
+              <span class="stat-label" data-i18n="statProducts">Ürün Çeşidi</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="12">0</span>
+              <span class="stat-label" data-i18n="statYears">Yıllık Tecrübe</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="3">0</span>
+              <span class="stat-label" data-i18n="statCities">Şehir</span>
+            </div>
+          </div>
         </div>
-        <div class="product-grid tags">
-          <div class="product-tag"><span class="icon">🍎</span><span class="product-name" data-tr="Nar" data-en="Pomegranate">Nar</span><div class="tag-detail" data-tr="Tatlı ve ferahlatıcı nar aromasıyla ortamınıza enerjik bir hava katar. 4 aya kadar kalıcı etki." data-en="Adds an energetic atmosphere to your space with its sweet and refreshing pomegranate aroma. Lasting effect up to 4 months.">Tatlı ve ferahlatıcı nar aromasıyla ortamınıza enerjik bir hava katar. 4 aya kadar kalıcı etki.</div></div>
-          <div class="product-tag"><span class="icon">🪵</span><span class="product-name" data-tr="Sandal" data-en="Sandalwood">Sandal</span><div class="tag-detail" data-tr="Sıcak ve odunsu sandal kokusuyla sakinleştirici bir atmosfer yaratır. Meditasyon ve dinlenme için ideal." data-en="Creates a calming atmosphere with its warm and woody sandalwood scent. Ideal for meditation and relaxation.">Sıcak ve odunsu sandal kokusuyla sakinleştirici bir atmosfer yaratır. Meditasyon ve dinlenme için ideal.</div></div>
-          <div class="product-tag"><span class="icon">🟡</span><span class="product-name" data-tr="Amber" data-en="Amber">Amber</span><div class="tag-detail" data-tr="Zengin ve büyüleyici amber kokusuyla ortamı sarar. Uzun süre kalıcı, sofistike bir koku." data-en="Envelops the space with its rich and fascinating amber scent. A long-lasting, sophisticated fragrance.">Zengin ve büyüleyici amber kokusuyla ortamı sarar. Uzun süre kalıcı, sofistike bir koku.</div></div>
-          <div class="product-tag"><span class="icon">🌹</span><span class="product-name" data-tr="Gül" data-en="Rose">Gül</span><div class="tag-detail" data-tr="Isparta güllerinden ilham alan zarif gül kokusu. Romantik ve ferah bir atmosfer için birebir." data-en="Elegant rose scent inspired by Isparta roses. Perfect for a romantic and fresh atmosphere.">Isparta güllerinden ilham alan zarif gül kokusu. Romantik ve ferah bir atmosfer için birebir.</div></div>
-          <div class="product-tag"><span class="icon">🌱</span><span class="product-name" data-tr="Nane" data-en="Mint">Nane</span><div class="tag-detail" data-tr="Taze nane ferahlığıyla ortamı canlandırır ve enerji verir. Özellikle sıcak günlerde serinletici etki." data-en="Revitalizes and energizes the space with fresh mint freshness. Cooling effect especially on hot days.">Taze nane ferahlığıyla ortamı canlandırır ve enerji verir. Özellikle sıcak günlerde serinletici etki.</div></div>
-          <div class="product-tag"><span class="icon">🌲</span><span class="product-name" data-tr="Orman" data-en="Forest">Orman</span><div class="tag-detail" data-tr="Doğanın kalbinden gelen çam ve orman kokusuyla evinize doğayı taşır. Ferah ve huzur verici." data-en="Brings nature into your home with pine and forest scent from the heart of nature. Fresh and peaceful.">Doğanın kalbinden gelen çam ve orman kokusuyla evinize doğayı taşır. Ferah ve huzur verici.</div></div>
-          <div class="product-tag"><span class="icon">🍒</span><span class="product-name" data-tr="Kiraz" data-en="Cherry">Kiraz</span><div class="tag-detail" data-tr="Tatlı ve meyvemsi kiraz kokusuyla ortama neşe katar. Genç ve dinamik bir atmosfer sunar." data-en="Adds joy to the environment with its sweet and fruity cherry scent. Offers a youthful and dynamic atmosphere.">Tatlı ve meyvemsi kiraz kokusuyla ortama neşe katar. Genç ve dinamik bir atmosfer sunar.</div></div>
-        </div>
-        <div class="product-info" style="margin-top:8px;" data-i18n="sprayInfoHtml" data-i18n-html="true">
-          <strong>Oda Kokularımız</strong> — Özel formülü sayesinde <strong>4 aya kadar kalıcılık</strong> sağlar. Doğal esansiyel yağlarla hazırlanmıştır. 7 farklı çeşidiyle her ortama uygun seçenek. <span class="card-detail-hint" data-i18n="detailHint">(Üzerine tıklayın)</span>
+        <div class="about-content">
+          <span class="section-label" data-i18n="aboutLabel">Hakkımızda</span>
+          <h2 class="section-title" data-i18n="aboutTitle">Doğal Güzelliğin Adresi</h2>
+          <p data-i18n="aboutP1">Natural Rose Shop olarak, en saf ve doğal ürünleri sizlerle buluşturuyoruz. Isparta'nın eşsiz gül ve lavanta yağlarından, el yapımı doğal sabunlarımıza kadar her ürünümüz özenle seçilir ve titizlikle hazırlanır.</p>
+          <p data-i18n="aboutP2">Yılların birikimiyle oluşturduğumuz güven dolu alışveriş deneyimimizle, sağlığınıza ve doğaya saygılı ürünler sunuyoruz.</p>
+          <a href="#contact" class="btn btn-primary" data-i18n="aboutBtn">Bize Ulaşın</a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- === PERFUMES === -->
-      <div class="category reveal">
-        <div class="category-header">
-          <h3 data-i18n="catPerfume">👑 Doğal Gül Parfüm</h3>
-          <span class="cat-badge" data-i18n="catPerfumePrice">400 ₺</span>
-          <span class="cat-note" data-i18n="catPerfumeNote">Erkek & Kadın</span>
-        </div>
-        <div class="product-grid cards" style="grid-template-columns:1fr 1fr;">
-          <div class="product-card">
-            <span class="icon">👨</span>
-            <h4 class="product-name" data-tr="Erkek Doğal Gül Parfüm" data-en="Men's Natural Rose Perfume">Erkek Doğal Gül Parfüm</h4>
-            <p class="desc" data-tr="Özel hazırlanmış doğal gül esansı" data-en="Specially prepared natural rose essence">Özel hazırlanmış doğal gül esansı</p>
-            <span class="price">400 ₺</span>
-            <div class="card-detail" data-tr="Isparta güllerinden elde edilen saf gül esansı ile hazırlanmıştır. Sentetik koku içermez, teninizle uyumlu doğal bir koku bırakır. Alkolsüz ve doğal içeriğiyle hassas ciltlerde güvenle kullanılabilir." data-en="Prepared with pure rose essence obtained from Isparta roses. Contains no synthetic fragrances, leaves a natural scent harmonious with your skin. Can be safely used on sensitive skin with its alcohol-free and natural content.">Isparta güllerinden elde edilen saf gül esansı ile hazırlanmıştır. Sentetik koku içermez, teninizle uyumlu doğal bir koku bırakır. Alkolsüz ve doğal içeriğiyle hassas ciltlerde güvenle kullanılabilir.</div>
-          </div>
-          <div class="product-card">
-            <span class="icon">👩</span>
-            <h4 class="product-name" data-tr="Kadın Doğal Gül Parfüm" data-en="Women's Natural Rose Perfume">Kadın Doğal Gül Parfüm</h4>
-            <p class="desc" data-tr="Doğal gül yağı ile hazırlanmış" data-en="Prepared with natural rose oil">Doğal gül yağı ile hazırlanmış</p>
-            <span class="price">400 ₺</span>
-            <div class="card-detail" data-tr="Isparta güllerinden elde edilen saf gül esansı ile hazırlanmıştır. Sentetik koku içermez, teninizle uyumlu doğal bir koku bırakır. Alkolsüz ve doğal içeriğiyle hassas ciltlerde güvenle kullanılabilir." data-en="Prepared with pure rose essence obtained from Isparta roses. Contains no synthetic fragrances, leaves a natural scent harmonious with your skin. Can be safely used on sensitive skin with its alcohol-free and natural content.">Isparta güllerinden elde edilen saf gül esansı ile hazırlanmıştır. Sentetik koku içermez, teninizle uyumlu doğal bir koku bırakır. Alkolsüz ve doğal içeriğiyle hassas ciltlerde güvenle kullanılabilir.</div>
-          </div>
-        </div>
+  <!-- ===== ABOUT SOCIAL ===== -->
+  <section id="about-social">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-label" data-i18n="aboutSocialLabel">Sosyal Medya</span>
+        <h2 class="section-title" data-i18n="aboutSocialTitle">Bizi Takip Edin</h2>
       </div>
-
-      <!-- === OILS === -->
-      <div class="category reveal">
-        <div class="category-header">
-          <h3 data-i18n="catOils">🧪 Doğal Yağlar</h3>
-          <span class="cat-badge" data-i18n="catOilsPrice">500 ₺</span>
-          <span class="cat-note" data-i18n="catOilsNote">Isparta yöresi • %100 doğal</span>
-        </div>
-        <div class="product-grid cards" style="grid-template-columns:1fr 1fr;">
-          <div class="product-card">
-            <span class="icon">🌹</span>
-            <h4 class="product-name" data-tr="Isparta Doğal Gül Yağı" data-en="Isparta Natural Rose Oil">Isparta Doğal Gül Yağı</h4>
-            <p class="desc" data-tr="Isparta güllerinden özenle damıtılmış" data-en="Carefully distilled from Isparta roses">Isparta güllerinden özenle damıtılmış</p>
-            <span class="price">500 ₺</span>
-            <div class="card-detail" data-tr="Isparta'nın eşsiz ikliminde yetişen güllerden geleneksel yöntemlerle elde edilir. %100 saf ve doğaldır. Cildi besler, nemlendirir, sıkılaştırır ve canlandırır. Aromaterapide ve masajda kullanılır." data-en="Obtained from roses grown in Isparta's unique climate using traditional methods. 100% pure and natural. Nourishes, moisturizes, tightens, and revitalizes the skin. Used in aromatherapy and massage.">Isparta'nın eşsiz ikliminde yetişen güllerden geleneksel yöntemlerle elde edilir. %100 saf ve doğaldır. Cildi besler, nemlendirir, sıkılaştırır ve canlandırır. Aromaterapide ve masajda kullanılır.</div>
-          </div>
-          <div class="product-card">
-            <span class="icon">🌸</span>
-            <h4 class="product-name" data-tr="Isparta Lavanta Yağı" data-en="Isparta Lavender Oil">Isparta Lavanta Yağı</h4>
-            <p class="desc" data-tr="Doğal lavanta çiçeklerinden elde edilmiş" data-en="Obtained from natural lavender flowers">Doğal lavanta çiçeklerinden elde edilmiş</p>
-            <span class="price">500 ₺</span>
-            <div class="card-detail" data-tr="Isparta lavanta çiçeklerinden özenle damıtılmış %100 saf yağ. Sakinleştirici etkisiyle stresi azaltır, cilt tahrişlerini yatıştırır. Masaj ve aromaterapi için idealdir." data-en="100% pure oil carefully distilled from Isparta lavender flowers. Reduces stress with its calming effect, soothes skin irritations. Ideal for massage and aromatherapy.">Isparta lavanta çiçeklerinden özenle damıtılmış %100 saf yağ. Sakinleştirici etkisiyle stresi azaltır, cilt tahrişlerini yatıştırır. Masaj ve aromaterapi için idealdir.</div>
-          </div>
-        </div>
+      <div class="social-showcase">
+        <a href="https://www.facebook.com/naturalroseshopdubai/" target="_blank" rel="noopener noreferrer" class="social-card">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          <h3>Facebook</h3>
+          <p>@naturalroseshopdubai</p>
+        </a>
+        <a href="https://www.instagram.com/natural_rose_shop_turkiye/" target="_blank" rel="noopener noreferrer" class="social-card">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+          <h3>Instagram</h3>
+          <p>@natural_rose_shop_turkiye</p>
+        </a>
       </div>
-
-      <!-- === KOLONYA === -->
-      <div class="category reveal">
-        <div class="category-header">
-          <h3 data-i18n="catKolonya">🧊 Kolonyalar</h3>
-          <span class="cat-badge" data-i18n="catKolonyaPrice">100 ₺</span>
-          <span class="cat-note" data-i18n="catKolonyaNote">400 ml • geleneksel</span>
-        </div>
-        <div class="product-grid tags">
-          <div class="product-tag"><span class="icon">🍋</span><span class="product-name" data-tr="Limon Kolonyası" data-en="Lemon Cologne">Limon Kolonyası</span><div class="tag-detail" data-tr="Taze limon ferahlığıyla canlandırır. Geleneksel tarifle hazırlanmış, ferahlatıcı ve hijyenik. 400 ml." data-en="Revitalizes with fresh lemon freshness. Prepared with traditional recipe, refreshing and hygienic. 400 ml.">Taze limon ferahlığıyla canlandırır. Geleneksel tarifle hazırlanmış, ferahlatıcı ve hijyenik. 400 ml.</div></div>
-          <div class="product-tag"><span class="icon">🌹</span><span class="product-name" data-tr="Gül Kolonyası" data-en="Rose Cologne">Gül Kolonyası</span><div class="tag-detail" data-tr="Zarif gül kokusuyla rahatlatır. Klasik Türk kolonyası deneyimini yaşatır. 400 ml." data-en="Relaxes with its elegant rose scent. Offers a classic Turkish cologne experience. 400 ml.">Zarif gül kokusuyla rahatlatır. Klasik Türk kolonyası deneyimini yaşatır. 400 ml.</div></div>
-          <div class="product-tag"><span class="icon">🟠</span><span class="product-name" data-tr="Safran Kolonyası" data-en="Saffron Cologne">Safran Kolonyası</span><div class="tag-detail" data-tr="Eşsiz safran aromasıyla özel bir deneyim sunar. Lüks ve ferahlatıcı. 400 ml." data-en="Offers a unique experience with its exclusive saffron aroma. Luxurious and refreshing. 400 ml.">Eşsiz safran aromasıyla özel bir deneyim sunar. Lüks ve ferahlatıcı. 400 ml.</div></div>
-        </div>
-        <div class="product-info" style="margin-top:8px;" data-i18n="kolonyaInfoHtml" data-i18n-html="true">
-          <strong>Kolonyalarımız</strong> — 400 ml şişelerde, geleneksel tarifle hazırlanmış ferahlatıcı kolonyalar. <span class="card-detail-hint" data-i18n="detailHint">(Üzerine tıklayın)</span>
-        </div>
-      </div>
-
-      <!-- === PAIN RELIEF === -->
-      <div class="category reveal">
-        <div class="category-header">
-          <h3 data-i18n="catCreams">💆 Ağrı Kesici Kremler</h3>
-          <span class="cat-note" data-i18n="catCreamsNote">%100 doğal • bitkisel</span>
-        </div>
-        <div class="product-grid cards">
-          <div class="product-card">
-            <span class="icon">🌰</span>
-            <h4 class="product-name" data-tr="At Kestaneli Krem" data-en="Horse Chestnut Cream">At Kestaneli Krem</h4>
-            <p class="desc" data-tr="500 g • Doğal at kestanesi özü" data-en="500 g • Natural horse chestnut extract">500 g • Doğal at kestanesi özü</p>
-            <span class="price" data-tr="250 ₺" data-en="250 ₺">250 ₺</span>
-            <div class="card-detail" data-tr="At kestanesi özü sayesinde varis, bacak ağrısı ve şişliklere iyi gelir. Kan dolaşımını destekler, ağrıyı hafifletir. %100 doğal içerik. 500 g." data-en="Good for varicose veins, leg pain, and swelling thanks to horse chestnut extract. Supports blood circulation, relieves pain. 100% natural content. 500 g.">At kestanesi özü sayesinde varis, bacak ağrısı ve şişliklere iyi gelir. Kan dolaşımını destekler, ağrıyı hafifletir. %100 doğal içerik. 500 g.</div>
-          </div>
-          <div class="product-card">
-            <span class="icon">🫎</span>
-            <h4 class="product-name" data-tr="Organik Kuyruk Yağı" data-en="Organic Tail Fat">Organik Kuyruk Yağı</h4>
-            <p class="desc" data-tr="Doğal • Organik • Şifalı" data-en="Natural • Organic • Healing">Doğal • Organik • Şifalı</p>
-            <span class="price" data-tr="300 ₺" data-en="300 ₺">300 ₺</span>
-            <div class="card-detail" data-tr="Eklem ve kas ağrılarında doğal bir rahatlama sağlar. Cilt tarafından kolayca emilir, uzun süreli etki gösterir. Tamamen organik ve katkısız." data-en="Provides natural relief for joint and muscle aches. Easily absorbed by the skin, shows long-lasting effect. Completely organic and additive-free.">Eklem ve kas ağrılarında doğal bir rahatlama sağlar. Cilt tarafından kolayca emilir, uzun süreli etki gösterir. Tamamen organik ve katkısız.</div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact">
     <div class="container">
-      <div class="products-header reveal">
-        <div class="section-label" data-i18n="contactLabel">İletişim</div>
+      <div class="section-head">
+        <span class="section-label" data-i18n="contactLabel">İletişim</span>
         <h2 class="section-title" data-i18n="contactTitle">Bize Ulaşın</h2>
-        <p class="section-desc" style="margin:0 auto;" data-i18n="contactDesc">
-          Mağazamızı ziyaret edebilir veya telefonla bize ulaşabilirsiniz.
-        </p>
+        <p class="section-desc" data-i18n="contactDesc">Mağazamızı ziyaret edebilir veya telefonla bize ulaşabilirsiniz.</p>
       </div>
 
-      <div class="contact-grid reveal">
+      <div class="contact-grid">
         <div class="contact-info">
-          <div class="contact-item">
-            <div class="icon">📍</div>
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
             <div>
-              <div class="label" data-i18n="contactAddressLabel">Adres</div>
-              <div class="value" data-i18n="contactAddress" data-i18n-html="true">
-                Tahtakale Mahallesi,<br>
-                Vasıfçınar Caddesi, No:17/85<br>
-                Eminönü / İstanbul
-              </div>
+              <strong data-i18n="contactAddressLabel">Adres</strong>
+              <p data-i18n="contactAddress">Tahtakale Mah. Vasıfçınar Cad. No:17/85, Eminönü / İstanbul</p>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="icon">📞</div>
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
             <div>
-              <div class="label" data-i18n="contactPhoneLabel">Telefon</div>
-              <div class="value">
-                <a href="tel:05355818687">0535 581 86 87</a>
-              </div>
+              <strong data-i18n="contactPhoneLabel">Telefon</strong>
+              <a href="tel:05355818687">0535 581 86 87</a>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="icon">👤</div>
-            <div>
-              <div class="label" data-i18n="contactPersonLabel">Yetkili</div>
-              <div class="value" data-i18n="contactPerson">Yılmaz Özgünlü</div>
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
             </div>
-          </div>
-          <div style="margin-top:12px;">
-            <a href="tel:05355818687" class="btn" data-i18n="contactCallBtn">📞 Hemen Ara</a>
-          </div>
-
-          <!-- === CONTACT FORM === -->
-          <div class="contact-form-wrap" style="margin-top:24px;">
-            <h3 data-i18n="contactTitle">Bize Ulaşın</h3>
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="name" data-i18n="contactFormName">Adınız</label>
-                <input type="text" id="name" name="name" required data-i18n-placeholder="contactFormName" placeholder="Adınız">
-              </div>
-              <div class="form-group">
-                <label for="email" data-i18n="contactFormEmail">E-posta</label>
-                <input type="email" id="email" name="email" required data-i18n-placeholder="contactFormEmail" placeholder="E-posta">
-              </div>
-              <div class="form-group">
-                <label for="phone" data-i18n="contactFormPhone">Telefon</label>
-                <input type="tel" id="phone" name="phone" data-i18n-placeholder="contactFormPhone" placeholder="Telefon">
-              </div>
-              <div class="form-group">
-                <label for="message" data-i18n="contactFormMessage">Mesajınız</label>
-                <textarea id="message" name="message" required data-i18n-placeholder="contactFormMessage" placeholder="Mesajınız"></textarea>
-              </div>
-              <button type="submit" class="btn form-submit" data-i18n="contactFormSubmit">Gönder</button>
-              <div id="formStatus" class="form-status"></div>
-            </form>
+            <div>
+              <strong data-i18n="contactPersonLabel">Yetkili</strong>
+              <p data-i18n="contactPerson">Yılmaz Özgünlü</p>
+            </div>
           </div>
         </div>
 
-        <div class="contact-map">
-          <iframe
-            title="Natural Rose Shop Konum"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.912!2d28.969894!3d41.016864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9b1b8b8b8b9%3A0x8b8b8b8b8b8b8b8b!2sTahtakale%20Mahallesi%2C%20Vas%C4%B1f%C3%A7%C4%B1nar%20Caddesi%2C%20Emin%C3%B6n%C3%BC%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="formName" data-i18n="contactFormName">Adınız</label>
+              <input type="text" id="formName" name="name" required data-i18n-placeholder="contactFormName" placeholder="Adınız">
+            </div>
+            <div class="form-group">
+              <label for="formEmail" data-i18n="contactFormEmail">E-posta</label>
+              <input type="email" id="formEmail" name="email" required data-i18n-placeholder="contactFormEmail" placeholder="E-posta">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="formMessage" data-i18n="contactFormMessage">Mesajınız</label>
+            <textarea id="formMessage" name="message" rows="4" required data-i18n-placeholder="contactFormMessage" placeholder="Mesajınız"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit" data-i18n="contactFormSubmit">Mesaj Gönder</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- ===== DETAIL MODAL ===== -->
-  <div id="detailModal" class="modal-overlay">
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-icon" id="modalIcon">🧴</div>
-      <h3 class="modal-title" id="modalTitle">Ürün Adı</h3>
-      <p class="modal-desc" id="modalDesc">Ürün detayı</p>
+  <!-- ===== NEWSLETTER ===== -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2 data-i18n="newsletterTitle">Bültenimize Abone Olun</h2>
+        <p data-i18n="newsletterDesc">Yeni ürünler, özel indirimler ve doğal bakım ipuçlarından haberdar olun.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="E-posta adresiniz" required data-i18n-placeholder="newsletterPlaceholder">
+          <button type="submit" class="btn btn-primary" data-i18n="newsletterBtn">Abone Ol</button>
+        </form>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
-      <div class="logo">Natural <span>Rose</span> Shop</div>
-      <p data-i18n="footerText">&copy; 2026 Natural Rose Shop — Tüm hakları saklıdır.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <svg class="logo-icon" viewBox="0 0 32 32" width="28" height="28" fill="none">
+              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M16 8c-2.5 0-5 2-5 5 0 3 2.5 5 5 5s5-2 5-5c0-3-2.5-5-5-5z" fill="currentColor" opacity="0.3"/>
+              <path d="M16 12c-1 0-2 .8-2 2s1 2 2 2 2-.8 2-2-1-2-2-2z" fill="currentColor" opacity="0.5"/>
+            </svg>
+            <span>Natural <em>Rose</em></span>
+          </div>
+          <p data-i18n="footerDesc">Doğanın en saf halleriyle hazırlanmış, el yapımı doğal ürünler.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/natural_rose_shop_turkiye/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/naturalroseshopdubai/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footerQuickLinks">Hızlı Linkler</h4>
+          <ul>
+            <li><a href="#hero" data-i18n="navHome">Ana Sayfa</a></li>
+            <li><a href="#products" data-i18n="navProducts">Ürünler</a></li>
+            <li><a href="#about" data-i18n="navAbout">Hakkımızda</a></li>
+            <li><a href="#contact" data-i18n="navContact">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footerCategories">Kategoriler</h4>
+          <ul>
+            <li><a href="#products" data-cat="soaps" data-i18n="catSoaps">Doğal Sabunlar</a></li>
+            <li><a href="#products" data-cat="sprays" data-i18n="catSprays">Oda Kokuları</a></li>
+            <li><a href="#products" data-cat="oils" data-i18n="catOils">Doğal Yağlar</a></li>
+            <li><a href="#products" data-cat="kolonya" data-i18n="catKolonya">Kolonyalar</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 data-i18n="contactTitle">İletişim</h4>
+          <ul>
+            <li><span data-i18n="contactAddressLabel">Adres:</span> Eminönü / İstanbul</li>
+            <li><span>Tel:</span> <a href="tel:05355818687">0535 581 86 87</a></li>
+            <li data-i18n="footerHours">Pzt-Cmt: 09:00 - 18:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footerText">&copy; 2026 Natural Rose Shop — Tüm hakları saklıdır.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <!-- ===== CART SIDEBAR ===== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar" aria-label="Alışveriş Sepeti">
+    <div class="cart-header">
+      <h3 data-i18n="cartTitle">Sepetiniz</h3>
+      <button class="cart-close" id="cartClose" aria-label="Sepeti kapat">&times;</button>
+    </div>
+    <div class="cart-body" id="cartBody">
+      <div class="cart-empty" data-i18n="cartEmpty">Sepetiniz boş.</div>
+      <div class="cart-items" id="cartItems"></div>
+    </div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total">
+        <span data-i18n="cartTotal">Toplam:</span>
+        <strong id="cartTotalPrice">0 ₺</strong>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn" data-i18n="cartCheckout">Ödemeye Geç</button>
+    </div>
+  </aside>
 
+  <!-- ===== PRODUCT MODAL ===== -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-body">
+        <div class="modal-icon" id="modalIcon"></div>
+        <h3 class="modal-title" id="modalTitle">Ürün Adı</h3>
+        <p class="modal-desc" id="modalDesc">Ürün detayı</p>
+        <div class="modal-price" id="modalPrice"></div>
+        <button class="btn btn-primary modal-add" id="modalAddBtn" data-i18n="modalAdd">Sepete Ekle</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
