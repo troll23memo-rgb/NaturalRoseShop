@@ -478,7 +478,7 @@ img { max-width: 100%; display: block; }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -1472,7 +1472,7 @@ footer {
 @media (max-width: 640px) {
   :root { --nav-h: 60px; }
   section { padding: 48px 0; }
-  .container { padding: 0 12px; }
+  .container { padding: 0 16px; }
   .hero-content h1 { font-size: clamp(2rem, 12vw, 3rem); }
   .hero-content { padding: 72px 12px 48px; }
   .hero-badge { font-size: 0.7rem; padding: 6px 14px; margin-bottom: 20px; }
@@ -1529,6 +1529,7 @@ footer {
 
 @media (max-width: 380px) {
   :root { --nav-h: 56px; }
+  .container { padding: 0 8px; }
   .header-inner { padding: 0 8px; }
   .logo { font-size: 0.85rem; gap: 4px; }
   .logo .logo-icon { width: 22px; height: 22px; }
@@ -1541,7 +1542,11 @@ footer {
   .stat-num { font-size: 1rem; }
   .cat-tab { font-size: 0.7rem; padding: 6px 10px; }
   .search-input { padding: 8px 10px 8px 32px; font-size: 0.8rem; }
-  .social-card { padding: 16px 12px; }
+  .social-card { padding: 16px 12px; gap: 6px; }
+  .social-card svg { width: 28px; height: 28px; }
+  .social-card h3 { font-size: 0.85rem; }
+  .social-card p { font-size: 0.75rem; }
+  .social-showcase { gap: 12px; }
   .contact-card { flex-direction: column; align-items: center; text-align: center; }
 }
 
@@ -1603,6 +1608,7 @@ footer {
 #about-social {
   background: var(--cream-alt);
   transition: background 0.35s ease;
+  overflow-x: hidden;
 }
 
 .social-showcase {
@@ -1611,6 +1617,7 @@ footer {
   gap: 24px;
   max-width: 600px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .social-card {
@@ -1625,6 +1632,8 @@ footer {
   text-align: center;
   color: var(--text);
   transition: all 0.4s var(--ease-out);
+  overflow: hidden;
+  word-break: break-word;
 }
 
 .social-card:hover {
@@ -1634,6 +1643,9 @@ footer {
 
 .social-card svg {
   color: var(--rose);
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .social-card h3 {

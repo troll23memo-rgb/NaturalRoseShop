@@ -76,8 +76,7 @@ const t = {
   feat2Desc: { tr: 'Kimyasal katkı içermez', en: 'No chemical additives' },
   feat3Title: { tr: 'Güvenli Ödeme', en: 'Secure Payment' },
   feat3Desc: { tr: '%100 güvenli alışveriş', en: '100% secure shopping' },
-  feat4Title: { tr: '30 Gün İade', en: '30 Days Return' },
-  feat4Desc: { tr: 'Koşulsuz iade garantisi', en: 'No-questions-asked returns' },
+
   productsLabel: { tr: 'Ürünlerimiz', en: 'Our Products' },
   productsTitle: { tr: 'Doğadan Gelen Şifa', en: 'Healing from Nature' },
   productsDesc: { tr: 'Her bir ürünümüz, doğanın bize sunduğu en saf halleriyle hazırlanmıştır.', en: 'Each product is prepared with nature\'s purest offerings.' },
